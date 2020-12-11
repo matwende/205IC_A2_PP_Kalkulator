@@ -19,5 +19,5 @@ int main() {
             res = a-b;
             break;
     }
-    printf("Wynik %f %c %f to %f", a, c, b, res);
+    printf("Wynik %0.1f %c %0.1f to %0.1f", a, c, b, res);
 }
