@@ -1,23 +1,26 @@
 #include <stdio.h>
 
 int main() {
-    float a, b, res;
+    int a, b;
+    float res;
     char c;
-    scanf("%f %c %f", &a, &c, &b);
+    do {
+        scanf("%i %c %i", &a, &c, &b);
+    } while (c == '/' && b == 0);
 
     switch (c) {
         case '*':
-            res = a*b;
+            res = a * b;
             break;
         case '/':
-            res = a/b;
+            res = a / (float) b;
             break;
         case '+':
-            res = a+b;
+            res = a + b;
             break;
         case '-':
-            res = a-b;
+            res = a - b;
             break;
     }
-    printf("Wynik %0.1f %c %0.1f to %0.1f", a, c, b, res);
+    printf("Wynik %i %c %i to %0.1f", a, c, b, res);
 }
